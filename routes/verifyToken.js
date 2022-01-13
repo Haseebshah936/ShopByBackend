@@ -1,6 +1,5 @@
 const jwt = require("jsonwebtoken");
 const { builtinModules } = require("module");
-// import jwt from "jsonwebtoken";
 
 const verifyToken = (req, res, next) => {
   const authHeader = req.headers.token;

@@ -8,17 +8,6 @@ const cryptoJS = require("crypto-js");
 
 const router = require("express").Router();
 
-// import express from "express";
-// import User from "../models/User.js";
-// import cryptoJS from "crypto-js";
-// import jwt from "jsonwebtoken";
-// import {
-//   verifyToken,
-//   verifyTokenAndAuthorization,
-//   verifyTokenAndAdmin,
-// } from "./verifyToken.js";
-// const router = express.Router();
-
 // UPDATE
 router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
   if (req.body.password) {
@@ -124,4 +113,3 @@ router.get("/stats", verifyTokenAndAdmin, async (req, res) => {
 });
 
 module.exports = router;
-// export default router;

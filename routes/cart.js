@@ -8,9 +8,6 @@ const cryptoJS = require("crypto-js");
 const Order = require("../models/Order");
 
 const router = require("express").Router();
-// import express from "express";
-// import Cart from "../models/Cart.js";
-// const router = express.Router();
 
 // Create
 
@@ -75,4 +72,3 @@ router.get("/", async (req, res) => {
 });
 
 module.exports = router;
-// export default router;
