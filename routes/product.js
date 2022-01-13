@@ -1,23 +1,23 @@
-// const Product = require("../models/Product");
-// const {
-//   verifyToken,
-//   verifyTokenAndAuthorization,
-//   verifyTokenAndAdmin,
-// } = require("./verifyToken");
-// const cryptoJS = require("crypto-js");
-
-// const router = require("express").Router();
-
-import express from "express";
-import Product from "../models/Product.js";
-import cryptoJS from "crypto-js";
-import jwt from "jsonwebtoken";
-import {
+const Product = require("../models/Product");
+const {
   verifyToken,
   verifyTokenAndAuthorization,
   verifyTokenAndAdmin,
-} from "./verifyToken.js";
-const router = express.Router();
+} = require("./verifyToken");
+const cryptoJS = require("crypto-js");
+
+const router = require("express").Router();
+
+// import express from "express";
+// import Product from "../models/Product.js";
+// import cryptoJS from "crypto-js";
+// import jwt from "jsonwebtoken";
+// import {
+//   verifyToken,
+//   verifyTokenAndAuthorization,
+//   verifyTokenAndAdmin,
+// } from "./verifyToken.js";
+// const router = express.Router();
 
 // Create
 
@@ -97,5 +97,5 @@ router.get("/", async (req, res) => {
   }
 });
 
-// module.exports = router;
-export default router;
+module.exports = router;
+// export default router;

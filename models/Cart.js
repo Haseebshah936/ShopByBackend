@@ -1,5 +1,5 @@
-// const mongoose = require("mongoose");
-import mongoose from "mongoose";
+const mongoose = require("mongoose");
+// import mongoose from "mongoose";
 
 const CartSchema = new mongoose.Schema(
   {
@@ -47,6 +47,6 @@ const CartSchema = new mongoose.Schema(
   }
 );
 
-// module.exports = mongoose.model("Cart", CartSchema);
-const Cart = mongoose.model("Cart", CartSchema);
-export default Cart;
+module.exports = mongoose.model("Cart", CartSchema);
+// const Cart = mongoose.model("Cart", CartSchema);
+// export default Cart;
