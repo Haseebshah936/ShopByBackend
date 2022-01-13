@@ -9,7 +9,7 @@ const orderRoute = require("./routes/Order");
 const authRoute = require("./routes/auth");
 const helmet = require("helmet");
 const compression = require("compression");
-const cors = require("cors");
+// const cors = require("cors");
 
 dotenv.config();
 
@@ -18,7 +18,8 @@ mongoose
   .then(() => console.log("Connected"))
   .catch((e) => console.log("Error", e));
 
-app.use(cors());
+// app.use(cors());
+app.use(express.static("public"));
 app.use(express.json());
 app.use(helmet());
 app.use(compression());
