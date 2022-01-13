@@ -16,7 +16,7 @@ mongoose
   .then(() => console.log("Connected"))
   .catch((e) => console.log("Error", e));
 
-app.use(cors());
+// app.use(cors());
 app.use(express.static("./public"));
 app.use(express.json());
 app.use("/api/auth", authRoute);
