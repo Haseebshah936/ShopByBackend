@@ -20,7 +20,7 @@ mongoose
 
 app.use(cors());
 app.use(express.json());
-app.use(helemt());
+app.use(helmet());
 app.use(compression());
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
