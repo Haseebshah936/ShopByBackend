@@ -1,13 +1,16 @@
-const Cart = require("../models/Cart");
-const {
-  verifyToken,
-  verifyTokenAndAuthorization,
-  verifyTokenAndAdmin,
-} = require("./verifyToken");
-const cryptoJS = require("crypto-js");
-const Order = require("../models/Order");
+// const Cart = require("../models/Cart");
+// const {
+//   verifyToken,
+//   verifyTokenAndAuthorization,
+//   verifyTokenAndAdmin,
+// } = require("./verifyToken");
+// const cryptoJS = require("crypto-js");
+// const Order = require("../models/Order");
 
-const router = require("express").Router();
+// const router = require("express").Router();
+import express from "express";
+import Cart from "../models/Cart.js";
+const router = express.Router();
 
 // Create
 
@@ -71,4 +74,5 @@ router.get("/", async (req, res) => {
   }
 });
 
-module.exports = router;
+// module.exports = router;
+export default router;

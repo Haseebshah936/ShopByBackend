@@ -1,12 +1,23 @@
-const User = require("../models/User");
-const {
+// const User = require("../models/User");
+// const {
+//   verifyToken,
+//   verifyTokenAndAuthorization,
+//   verifyTokenAndAdmin,
+// } = require("./verifyToken");
+// const cryptoJS = require("crypto-js");
+
+// const router = require("express").Router();
+
+import express from "express";
+import User from "../models/User.js";
+import cryptoJS from "crypto-js";
+import jwt from "jsonwebtoken";
+import {
   verifyToken,
   verifyTokenAndAuthorization,
   verifyTokenAndAdmin,
-} = require("./verifyToken");
-const cryptoJS = require("crypto-js");
-
-const router = require("express").Router();
+} from "./verifyToken.js";
+const router = express.Router();
 
 // UPDATE
 router.put("/:id", verifyTokenAndAuthorization, async (req, res) => {
@@ -112,4 +123,5 @@ router.get("/stats", verifyTokenAndAdmin, async (req, res) => {
   }
 });
 
-module.exports = router;
+// module.exports = router;
+export default router;

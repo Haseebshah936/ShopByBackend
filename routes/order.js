@@ -1,12 +1,22 @@
-const Order = require("../models/Order");
-const {
+// const Order = require("../models/Order");
+// const {
+//   verifyToken,
+//   verifyTokenAndAuthorization,
+//   verifyTokenAndAdmin,
+// } = require("./verifyToken");
+// const cryptoJS = require("crypto-js");
+
+// const router = require("express").Router();
+
+import express from "express";
+import Order from "../models/Order.js";
+import {
   verifyToken,
   verifyTokenAndAuthorization,
   verifyTokenAndAdmin,
-} = require("./verifyToken");
-const cryptoJS = require("crypto-js");
+} from "./verifyToken.js";
 
-const router = require("express").Router();
+const router = express.Router();
 
 // Create
 
@@ -102,4 +112,5 @@ router.get("/income", verifyTokenAndAdmin, async (req, res) => {
   }
 });
 
-module.exports = router;
+// module.exports = router;
+export default router;

@@ -1,16 +1,28 @@
-const express = require("express");
-const app = express();
-const mongoose = require("mongoose");
-const dotenv = require("dotenv");
-const userRoute = require("./routes/user");
-const productRoute = require("./routes/product");
-const cartRoute = require("./routes/Cart");
-const orderRoute = require("./routes/Order");
-const authRoute = require("./routes/auth");
-const helmet = require("helmet");
-const compression = require("compression");
+// const express = require("express");
+// const mongoose = require("mongoose");
+// const dotenv = require("dotenv");
+// const userRoute = require("./routes/user");
+// const productRoute = require("./routes/product");
+// const cartRoute = require("./routes/Cart");
+// const orderRoute = require("./routes/Order");
+// const authRoute = require("./routes/auth");
+// const helmet = require("helmet");
+// const compression = require("compression");
 // const cors = require("cors");
 
+import express from "express";
+import mongoose from "mongoose";
+import dotenv from "dotenv";
+import helmet from "helmet";
+import compression from "compression";
+import cors from "cors";
+import userRoute from "./routes/user.js";
+import productRoute from "./routes/product.js";
+import cartRoute from "./routes/Cart.js";
+import orderRoute from "./routes/Order.js";
+import authRoute from "./routes/auth.js";
+
+const app = express();
 dotenv.config();
 
 mongoose
