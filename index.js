@@ -7,7 +7,9 @@ const productRoute = require("./routes/product");
 const cartRoute = require("./routes/Cart");
 const orderRoute = require("./routes/Order");
 const authRoute = require("./routes/auth");
-// const cors = require("cors");
+const helmet = require("helmet");
+const compression = require("compression");
+const cors = require("cors");
 
 dotenv.config();
 
@@ -16,9 +18,10 @@ mongoose
   .then(() => console.log("Connected"))
   .catch((e) => console.log("Error", e));
 
-// app.use(cors());
-app.use(express.static("public"));
+app.use(cors());
 app.use(express.json());
+app.use(helemt());
+app.use(compression());
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/product", productRoute);
